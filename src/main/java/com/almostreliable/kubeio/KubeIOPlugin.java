@@ -36,7 +36,7 @@ public class KubeIOPlugin extends KubeJSPlugin {
     @Override
     public void registerRecipeSchemas(RegisterRecipeSchemasEvent event) {
         Map<RecipeTypeSerializerPair<?, ?>, RecipeSchema> basicRecipeSchemas = Map.of(
-            EIORecipes.FIRE_CRAFTING, FireRecipeSchema.SCHEMA,
+            EIORecipes.FIRE_CRAFTING, FireCraftingRecipeSchema.SCHEMA,
             EIORecipes.GRINDING_BALL, GrindingBallRecipeSchema.SCHEMA
         );
 
@@ -60,7 +60,9 @@ public class KubeIOPlugin extends KubeJSPlugin {
         }
     }
 
-    private void registerRecipeSchema(RecipeNamespace namespace, Map.Entry<RecipeTypeSerializerPair<?, ?>, RecipeSchema> schemaEntry) {
+    private void registerRecipeSchema(
+        RecipeNamespace namespace, Map.Entry<RecipeTypeSerializerPair<?, ?>, RecipeSchema> schemaEntry
+    ) {
         String id = schemaEntry.getKey().type().getId().getPath();
         namespace.register(id, schemaEntry.getValue());
     }
