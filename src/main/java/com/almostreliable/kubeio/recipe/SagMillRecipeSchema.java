@@ -14,8 +14,7 @@ import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
 public interface SagMillRecipeSchema extends CommonRecipeKeys {
 
     RecipeKey<SagMillingRecipe.OutputItem[]> OUTPUTS = KubeIOComponents.OUTPUT_ITEM_ARRAY.key("outputs").noBuilders();
-    RecipeKey<SagMillingRecipe.BonusType> BONUS_TYPE = new EnumComponent<>(SagMillingRecipe.BonusType.class)
-        .key("bonus")
+    RecipeKey<SagMillingRecipe.BonusType> BONUS_TYPE = new EnumComponent<>(SagMillingRecipe.BonusType.class).key("bonus")
         .optional(SagMillingRecipe.BonusType.MULTIPLY_OUTPUT);
 
     RecipeSchema SCHEMA = new RecipeSchema(

@@ -14,9 +14,18 @@ import net.minecraft.world.item.Item;
 public interface GrindingBallRecipeSchema {
 
     RecipeKey<Item> ITEM = KubeIOComponents.ITEM.key("item").noBuilders();
-    RecipeKey<Float> GRINDING = NumberComponent.FLOAT.key("grinding").preferred("doublingChance").optional(1f).alwaysWrite();
-    RecipeKey<Float> CHANCE = NumberComponent.FLOAT.key("chance").preferred("bonusMultiplier").optional(1f).alwaysWrite();
-    RecipeKey<Float> POWER = NumberComponent.FLOAT.key("power").preferred("powerUse").optional(1f).alwaysWrite();
+    RecipeKey<Float> GRINDING = NumberComponent.FLOAT.key("grinding")
+        .preferred("doublingChance")
+        .optional(1f)
+        .alwaysWrite();
+    RecipeKey<Float> CHANCE = NumberComponent.FLOAT.key("chance")
+        .preferred("bonusMultiplier")
+        .optional(1f)
+        .alwaysWrite();
+    RecipeKey<Float> POWER = NumberComponent.FLOAT.key("power")
+        .preferred("powerUse")
+        .optional(1f)
+        .alwaysWrite();
     RecipeKey<Integer> DURABILITY = NumberComponent.INT.key("durability").optional(10).alwaysWrite();
 
     RecipeSchema SCHEMA = new RecipeSchema(
