@@ -3,6 +3,7 @@ package com.almostreliable.kubeio.recipe;
 import com.almostreliable.kubeio.CommonRecipeKeys;
 import com.enderio.machines.common.recipe.SlicingRecipe;
 import com.enderio.machines.data.recipes.SlicingRecipeProvider;
+import dev.latvian.mods.kubejs.recipe.RecipeExceptionJS;
 import dev.latvian.mods.kubejs.recipe.RecipeJS;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
 
@@ -26,7 +27,7 @@ public interface SlicerRecipeSchema extends CommonRecipeKeys {
             super.afterLoaded();
             var inputs = getValue(MULTI_INPUT);
             if (inputs.length != 6) {
-                throw new IllegalArgumentException("Slicer recipe must have 6 inputs");
+                throw new RecipeExceptionJS("Slicer recipe must have 6 inputs").error();
             }
         }
     }
