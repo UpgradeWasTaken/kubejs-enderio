@@ -50,7 +50,6 @@ loom {
 repositories {
     maven("https://maven.parchmentmc.org") // Parchment
     maven("https://maven.latvian.dev/releases") // KubeJS
-    maven("https://jitpack.io") // Mixin Extras for KubeJS
     flatDir {
         name = "EnderIO Local"
         dirs(file("deps"))
