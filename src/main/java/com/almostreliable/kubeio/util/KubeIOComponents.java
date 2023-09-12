@@ -1,7 +1,8 @@
-package com.almostreliable.kubeio;
+package com.almostreliable.kubeio.util;
 
-import com.almostreliable.kubeio.mixin.IngredientAccessor;
-import com.almostreliable.kubeio.mixin.TagValueAccessor;
+import com.almostreliable.kubeio.KubeIOPlugin;
+import com.almostreliable.kubeio.mixin.accessor.IngredientAccessor;
+import com.almostreliable.kubeio.mixin.accessor.TagValueAccessor;
 import com.enderio.core.common.recipes.CountedIngredient;
 import com.enderio.machines.common.recipe.SagMillingRecipe;
 import com.google.gson.JsonElement;

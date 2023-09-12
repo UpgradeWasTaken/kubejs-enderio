@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.recipe;
 
-import com.almostreliable.kubeio.KubeIOComponents;
+import com.almostreliable.kubeio.util.KubeIOComponents;
 import com.enderio.base.common.recipe.FireCraftingRecipe;
 import com.enderio.base.data.recipe.FireCraftingRecipes;
 import com.mojang.datafixers.util.Either;

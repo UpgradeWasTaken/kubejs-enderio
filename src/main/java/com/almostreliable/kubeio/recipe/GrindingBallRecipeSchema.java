@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.recipe;
 
-import com.almostreliable.kubeio.KubeIOComponents;
+import com.almostreliable.kubeio.util.KubeIOComponents;
 import com.enderio.base.common.recipe.GrindingBallRecipe;
 import com.enderio.base.data.recipe.GrindingBallRecipeProvider;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;

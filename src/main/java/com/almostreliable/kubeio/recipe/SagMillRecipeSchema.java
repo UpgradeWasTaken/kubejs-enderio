@@ -1,7 +1,7 @@
 package com.almostreliable.kubeio.recipe;
 
-import com.almostreliable.kubeio.CommonRecipeKeys;
-import com.almostreliable.kubeio.KubeIOComponents;
+import com.almostreliable.kubeio.util.CommonRecipeKeys;
+import com.almostreliable.kubeio.util.KubeIOComponents;
 import com.enderio.machines.common.recipe.SagMillingRecipe;
 import com.enderio.machines.data.recipes.SagMillRecipeProvider;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;

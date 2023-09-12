@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.recipe;
 
-import com.almostreliable.kubeio.CommonRecipeKeys;
+import com.almostreliable.kubeio.util.CommonRecipeKeys;
 import com.enderio.machines.common.recipe.TankRecipe;
 import com.enderio.machines.data.recipes.TankRecipeProvider;
 import dev.latvian.mods.kubejs.fluid.InputFluid;

@@ -1,4 +1,4 @@
-package com.almostreliable.kubeio;
+package com.almostreliable.kubeio.util;
 
 import com.enderio.base.common.init.EIORecipes;
 import com.enderio.core.common.recipes.CountedIngredient;

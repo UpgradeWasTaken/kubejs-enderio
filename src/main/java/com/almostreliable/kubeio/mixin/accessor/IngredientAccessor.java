@@ -1,4 +1,4 @@
-package com.almostreliable.kubeio.mixin;
+package com.almostreliable.kubeio.mixin.accessor;
 
 import net.minecraft.world.item.crafting.Ingredient;
 import org.spongepowered.asm.mixin.Mixin;
