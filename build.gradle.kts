@@ -74,6 +74,7 @@ dependencies {
     modImplementation("dev.latvian.mods:kubejs-forge:$kjsVersion")
     modImplementation("deps:EnderIO:$minecraftVersion-$eioVersion")
     modCompileOnly("deps:EnderIO:$minecraftVersion-$eioVersion-sources")
+    modCompileOnly("mezz.jei:jei-$minecraftVersion-common-api:15.2.0.27") { isTransitive = false }
 
     // Runtime
     modLocalRuntime("com.tterrag.registrate:Registrate:MC1.20-1.3.11")

@@ -9,23 +9,32 @@ import com.enderio.machines.common.recipe.SagMillingRecipe;
 import com.google.gson.JsonObject;
 import dev.latvian.mods.kubejs.KubeJSPlugin;
 import dev.latvian.mods.kubejs.item.InputItem;
+import dev.latvian.mods.kubejs.recipe.RecipeJS;
+import dev.latvian.mods.kubejs.recipe.filter.IDFilter;
+import dev.latvian.mods.kubejs.recipe.filter.RecipeFilter;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeNamespace;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
 import dev.latvian.mods.kubejs.recipe.schema.RegisterRecipeSchemasEvent;
 import dev.latvian.mods.kubejs.script.BindingsEvent;
 import dev.latvian.mods.kubejs.script.ScriptType;
 import dev.latvian.mods.kubejs.util.MapJS;
+import dev.latvian.mods.rhino.util.HideFromJS;
 import dev.latvian.mods.rhino.util.wrap.TypeWrappers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.MobCategory;
 
-import java.util.Map;
+import java.util.*;
+import java.util.function.Function;
 
 public class KubeIOPlugin extends KubeJSPlugin {
 
     @Override
     public void registerBindings(BindingsEvent event) {
-        event.add("MobCategory", MobCategory.class);
-        event.add("EIOBonusType", SagMillingRecipe.BonusType.class);
+        if (event.getType().isServer()) {
+            event.add("MobCategory", MobCategory.class);
+            event.add("EIOBonusType", SagMillingRecipe.BonusType.class);
+            event.add("EnderIORecipes", EnderIORecipes.class);
+        }
     }
 
     @Override
@@ -86,5 +95,44 @@ public class KubeIOPlugin extends KubeJSPlugin {
 
         InputItem inputItem = InputItem.of(o);
         return CountedIngredient.of(inputItem.count, inputItem.ingredient);
+    }
+
+    public static final class EnderIORecipes {
+
+        @HideFromJS public static final Set<ResourceLocation> FILTERED_SMELTING_RECIPES = new HashSet<>();
+        private static final List<RecipeFilter> SMELTING_RECIPE_FILTERS = new ArrayList<>();
+
+        private EnderIORecipes() {
+        }
+
+        @HideFromJS
+        public static void resolveRecipes(
+            Map<ResourceLocation, RecipeJS> recipes, Function<RecipeFilter, Collection<RecipeJS>> recipeLookup
+        ) {
+            FILTERED_SMELTING_RECIPES.clear();
+
+            for (RecipeFilter filter : SMELTING_RECIPE_FILTERS) {
+                if (filter instanceof IDFilter id) {
+                    RecipeJS r = recipes.get(id.id);
+                    if (r != null) addFilteredSmeltingRecipe(r);
+                    return;
+                }
+
+                recipeLookup.apply(filter).forEach(EnderIORecipes::addFilteredSmeltingRecipe);
+            }
+
+            SMELTING_RECIPE_FILTERS.clear();
+        }
+
+        private static void addFilteredSmeltingRecipe(RecipeJS recipe) {
+            if (recipe.type.id.toString().equals("minecraft:smelting")) {
+                FILTERED_SMELTING_RECIPES.add(recipe.id);
+            }
+        }
+
+        @SuppressWarnings("unused")
+        public static void removeVanillaSmeltingRecipe(RecipeFilter filter) {
+            SMELTING_RECIPE_FILTERS.add(filter);
+        }
     }
 }

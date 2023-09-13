@@ -1,5 +1,5 @@
 @ParametersAreNonnullByDefault @MethodsReturnNonnullByDefault
-package com.almostreliable.kubeio.mixin;
+package com.almostreliable.kubeio.compat;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 
