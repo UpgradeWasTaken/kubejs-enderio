@@ -1,7 +1,7 @@
 package com.almostreliable.kubeio.recipe;
 
 import com.almostreliable.kubeio.util.CommonRecipeKeys;
-import com.almostreliable.kubeio.util.KubeIOComponents;
+import com.almostreliable.kubeio.util.RecipeComponents;
 import com.enderio.machines.common.recipe.SagMillingRecipe;
 import com.enderio.machines.data.recipes.SagMillRecipeProvider;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -13,7 +13,7 @@ import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
  */
 public interface SagMillRecipeSchema extends CommonRecipeKeys {
 
-    RecipeKey<SagMillingRecipe.OutputItem[]> OUTPUTS = KubeIOComponents.OUTPUT_ITEM_ARRAY.key("outputs").noBuilders();
+    RecipeKey<SagMillingRecipe.OutputItem[]> OUTPUTS = RecipeComponents.OUTPUT_ITEM_ARRAY.key("outputs").noBuilders();
     RecipeKey<SagMillingRecipe.BonusType> BONUS_TYPE = new EnumComponent<>(SagMillingRecipe.BonusType.class).key("bonus")
         .optional(SagMillingRecipe.BonusType.MULTIPLY_OUTPUT);
 

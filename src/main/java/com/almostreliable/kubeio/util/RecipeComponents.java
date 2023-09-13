@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.util;
 
-import com.almostreliable.kubeio.KubeIOPlugin;
+import com.almostreliable.kubeio.core.KubePlugin;
 import com.almostreliable.kubeio.mixin.accessor.IngredientAccessor;
 import com.almostreliable.kubeio.mixin.accessor.TagValueAccessor;
 import com.enderio.core.common.recipes.CountedIngredient;
@@ -31,7 +31,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Objects;
 
-public interface KubeIOComponents {
+public interface RecipeComponents {
 
     RecipeComponent<CountedIngredient> COUNTED_INGREDIENT = new RecipeComponent<>() {
 
@@ -52,7 +52,7 @@ public interface KubeIOComponents {
 
         @Override
         public CountedIngredient read(RecipeJS recipe, Object from) {
-            return KubeIOPlugin.wrapCountedIngredient(from);
+            return KubePlugin.wrapCountedIngredient(from);
         }
 
         @Override

@@ -1,7 +1,6 @@
 package com.almostreliable.kubeio.util;
 
 import com.enderio.base.common.init.EIORecipes;
-import com.enderio.core.common.recipes.CountedIngredient;
 import com.enderio.machines.common.init.MachineRecipes;
 import dev.latvian.mods.kubejs.item.InputItem;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -16,7 +15,6 @@ public interface CommonRecipeKeys {
 
     RecipeKey<InputItem> SINGLE_INPUT = ItemComponents.INPUT.key("input").noBuilders();
     RecipeKey<InputItem[]> MULTI_INPUT = ItemComponents.INPUT_ARRAY.key("inputs").noBuilders();
-    RecipeKey<CountedIngredient[]> MULTI_COUNTED_INPUT = KubeIOComponents.COUNTED_INGREDIENT_ARRAY.key("inputs").noBuilders();
-    RecipeKey<Item> ITEM_OUTPUT = KubeIOComponents.ITEM.key("output").noBuilders();
+    RecipeKey<Item> ITEM_OUTPUT = RecipeComponents.ITEM.key("output").noBuilders();
     RecipeKey<Integer> ENERGY = NumberComponent.INT.key("energy").optional(2_000).alwaysWrite();
 }

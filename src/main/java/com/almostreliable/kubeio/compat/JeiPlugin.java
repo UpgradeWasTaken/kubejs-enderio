@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.compat;
 
-import com.almostreliable.kubeio.KubeIO;
+import com.almostreliable.kubeio.ModInitializer;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.runtime.IJeiRuntime;
 import net.minecraft.resources.ResourceLocation;
@@ -12,12 +12,12 @@ public class JeiPlugin implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
-        return KubeIO.getRl("jei");
+        return ModInitializer.getRl("jei");
     }
 
     @Override
     public void onRuntimeAvailable(IJeiRuntime jeiRuntime) {
         RUNTIME = jeiRuntime;
-        JeiAdapter.Adapter.applyRecipeFilters(jeiRuntime);
+        JeiAdapter.Adapter.applyRecipeFilters();
     }
 }

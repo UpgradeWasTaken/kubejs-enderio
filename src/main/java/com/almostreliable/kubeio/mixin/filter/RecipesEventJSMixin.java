@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.mixin.filter;
 
-import com.almostreliable.kubeio.KubeIOPlugin;
+import com.almostreliable.kubeio.core.RecipesBinding;
 import com.google.gson.JsonElement;
 import dev.latvian.mods.kubejs.recipe.RecipeJS;
 import dev.latvian.mods.kubejs.recipe.RecipesEventJS;
@@ -31,6 +31,6 @@ public abstract class RecipesEventJSMixin {
     private void kubeio$resolveRecipes(
         RecipeManager recipeManager, Map<ResourceLocation, JsonElement> recipes, CallbackInfo ci
     ) {
-        KubeIOPlugin.EnderIORecipes.resolveRecipes(originalRecipes, this::findRecipes);
+        RecipesBinding.resolveRecipes(originalRecipes, this::findRecipes);
     }
 }

@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.mixin.filter;
 
-import com.almostreliable.kubeio.KubeIOPlugin;
+import com.almostreliable.kubeio.core.RecipesBinding;
 import com.enderio.machines.common.recipe.AlloySmeltingRecipe;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.Level;
@@ -28,7 +28,7 @@ public abstract class AlloySmelterBlockEntityMixin {
         Level level, int i, Optional<SmeltingRecipe> recipe
     ) {
         if (recipe.isPresent() &&
-            KubeIOPlugin.EnderIORecipes.FILTERED_SMELTING_RECIPES.contains(recipe.get().getId())) {
+            RecipesBinding.FILTERED_SMELTING_RECIPES.contains(recipe.get().getId())) {
             cir.setReturnValue(Optional.empty());
         }
     }

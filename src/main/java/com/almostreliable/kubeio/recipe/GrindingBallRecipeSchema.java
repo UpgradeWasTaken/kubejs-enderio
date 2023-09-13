@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.recipe;
 
-import com.almostreliable.kubeio.util.KubeIOComponents;
+import com.almostreliable.kubeio.util.RecipeComponents;
 import com.enderio.base.common.recipe.GrindingBallRecipe;
 import com.enderio.base.data.recipe.GrindingBallRecipeProvider;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -13,7 +13,7 @@ import net.minecraft.world.item.Item;
  */
 public interface GrindingBallRecipeSchema {
 
-    RecipeKey<Item> ITEM = KubeIOComponents.ITEM.key("item").noBuilders();
+    RecipeKey<Item> ITEM = RecipeComponents.ITEM.key("item").noBuilders();
     RecipeKey<Float> GRINDING = NumberComponent.FLOAT.key("grinding")
         .preferred("doublingChance")
         .optional(1f)
