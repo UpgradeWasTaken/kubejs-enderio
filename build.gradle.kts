@@ -14,6 +14,7 @@ val parchmentVersion: String by project
 val forgeVersion: String by project
 val kjsVersion: String by project
 val eioVersion: String by project
+val jeiVersion: String by project
 val githubUser: String by project
 val githubRepo: String by project
 
@@ -74,11 +75,11 @@ dependencies {
     modImplementation("dev.latvian.mods:kubejs-forge:$kjsVersion")
     modImplementation("deps:EnderIO:$minecraftVersion-$eioVersion")
     modCompileOnly("deps:EnderIO:$minecraftVersion-$eioVersion-sources")
-    modCompileOnly("mezz.jei:jei-$minecraftVersion-common-api:15.2.0.27") { isTransitive = false }
+    modCompileOnly("mezz.jei:jei-$minecraftVersion-common-api:$jeiVersion") { isTransitive = false }
 
     // Runtime
     modLocalRuntime("com.tterrag.registrate:Registrate:MC1.20-1.3.11")
-    modLocalRuntime("mezz.jei:jei-$minecraftVersion-forge:15.2.0.27") { isTransitive = false }
+    modLocalRuntime("mezz.jei:jei-$minecraftVersion-forge:$jeiVersion") { isTransitive = false }
 }
 
 tasks {
