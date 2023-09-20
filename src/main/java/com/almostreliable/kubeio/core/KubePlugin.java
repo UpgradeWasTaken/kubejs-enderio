@@ -26,7 +26,7 @@ public class KubePlugin extends KubeJSPlugin {
     public void registerBindings(BindingsEvent event) {
         if (event.getType().isServer()) {
             event.add("MobCategory", MobCategory.class);
-            event.add("EIOBonusType", SagMillingRecipe.BonusType.class);
+            event.add("EnderIOBonusType", SagMillingRecipe.BonusType.class);
             event.add("EnderIORecipes", RecipesBinding.class);
         }
     }
