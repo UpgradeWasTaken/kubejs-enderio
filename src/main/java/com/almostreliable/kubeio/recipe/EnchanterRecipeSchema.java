@@ -2,6 +2,7 @@ package com.almostreliable.kubeio.recipe;
 
 import com.almostreliable.kubeio.util.CommonRecipeKeys;
 import com.almostreliable.kubeio.util.RecipeComponents;
+import com.enderio.core.common.recipes.CountedIngredient;
 import com.enderio.machines.common.recipe.EnchanterRecipe;
 import com.enderio.machines.data.recipes.EnchanterRecipeProvider;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -15,7 +16,8 @@ import net.minecraft.world.item.enchantment.Enchantment;
 public interface EnchanterRecipeSchema extends CommonRecipeKeys {
 
     RecipeKey<Enchantment> ENCHANTMENT = RecipeComponents.ENCHANTMENT.key("enchantment").noBuilders();
-    RecipeKey<Integer> AMOUNT = NumberComponent.INT.key("amount").optional(1).alwaysWrite();
+    RecipeKey<CountedIngredient> COUNTED_INPUT = RecipeComponents.COUNTED_INGREDIENT.key("input")
+        .noBuilders();
     RecipeKey<Integer> COST_MULTIPLIER = NumberComponent.INT.key("cost_multiplier")
         .preferred("costMultiplier")
         .optional(1)
@@ -23,8 +25,7 @@ public interface EnchanterRecipeSchema extends CommonRecipeKeys {
 
     RecipeSchema SCHEMA = new RecipeSchema(
         ENCHANTMENT,
-        SINGLE_INPUT,
-        AMOUNT,
+        COUNTED_INPUT,
         COST_MULTIPLIER
     );
 }
