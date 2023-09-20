@@ -35,6 +35,6 @@ Initial 1.20.1 release!
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
-[0.3.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-0.3.0-forge-beta
+[0.3.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.3.0-beta
 [0.2.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-0.2.0-forge-beta
 [0.1.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-0.1.0-forge-beta
