@@ -23,7 +23,7 @@ public interface GrindingBallRecipeSchema {
         .optional(1f)
         .alwaysWrite();
     RecipeKey<Float> POWER = NumberComponent.FLOAT.key("power")
-        .preferred("powerUse")
+        .preferred("powerUseMultiplier")
         .optional(1f)
         .alwaysWrite();
     RecipeKey<Integer> DURABILITY = NumberComponent.INT.key("durability").optional(10).alwaysWrite();
