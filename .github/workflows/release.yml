@@ -159,9 +159,9 @@ jobs:
           java: ${{ env.JAVA_VERSION }}
 
           dependencies: |
-            ae2(required){curseforge:223794}{modrinth:XxWD5pD3}
+            kubejs(required){curseforge:238086}{modrinth:umyGl7zF}
+            enderio(required){curseforge:64578}{modrinth:49ZofO4f}
             jei(optional){curseforge:238222}{modrinth:u6dRKJwZ}
-            rei(optional){curseforge:310111}{modrinth:nfn13YXA}
 
   cf-forge-release:
     name: CurseForge Forge Release
@@ -195,9 +195,9 @@ jobs:
           java: ${{ env.JAVA_VERSION }}
 
           dependencies: |
-            ae2(required){curseforge:223794}{modrinth:XxWD5pD3}
+            kubejs(required){curseforge:238086}{modrinth:umyGl7zF}
+            enderio(required){curseforge:64578}{modrinth:49ZofO4f}
             jei(optional){curseforge:238222}{modrinth:u6dRKJwZ}
-            rei(optional){curseforge:310111}{modrinth:nfn13YXA}
 
   github-release:
     name: GitHub Release
