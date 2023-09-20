@@ -2,7 +2,7 @@ package com.almostreliable.kubeio.recipe;
 
 import com.almostreliable.kubeio.util.RecipeComponents;
 import com.enderio.base.common.recipe.FireCraftingRecipe;
-import com.enderio.base.data.recipe.FireCraftingRecipes;
+import com.enderio.base.data.recipe.FireCraftingRecipeProvider;
 import com.mojang.datafixers.util.Either;
 import dev.latvian.mods.kubejs.recipe.RecipeJS;
 import dev.latvian.mods.kubejs.recipe.RecipeKey;
@@ -14,13 +14,13 @@ import net.minecraft.world.level.block.Block;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**
- * See {@link FireCraftingRecipe.Serializer} and {@link FireCraftingRecipes}.
+ * See {@link FireCraftingRecipe.Serializer} and {@link FireCraftingRecipeProvider}.
  */
 public interface FireCraftingRecipeSchema {
 
-    RecipeKey<String> LOOT_TABLE = StringComponent.ID.key("lootTable").noBuilders();
     RecipeKey<Either<Block, TagKey<Block>>[]> BASE_BLOCKS = RecipeComponents.BLOCK_OR_TAG_ARRAY.key("base_blocks")
         .noBuilders();
+    RecipeKey<String> LOOT_TABLE = StringComponent.ID.key("loot_table").noBuilders();
     RecipeKey<String[]> DIMENSIONS = StringComponent.ID.asArray().key("dimensions")
         .optional(ArrayUtils.toArray("minecraft:overworld"))
         .alwaysWrite();

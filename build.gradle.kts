@@ -19,7 +19,7 @@ val githubUser: String by project
 val githubRepo: String by project
 
 plugins {
-    id("dev.architectury.loom") version "1.3.+"
+    id("dev.architectury.loom") version "1.2.+" // TODO: update to 1.3.+ when JiJ fix is forward ported
     id("io.github.juuxel.loom-vineflower") version "1.11.0"
     id("com.github.gmazzo.buildconfig") version "4.0.4"
     java
@@ -51,11 +51,11 @@ loom {
 repositories {
     maven("https://maven.parchmentmc.org") // Parchment
     maven("https://maven.latvian.dev/releases") // KubeJS
-    flatDir {
-        name = "EnderIO Local"
-        dirs(file("deps"))
-    }
+    maven("https://maven.rover656.dev/releases") // EnderIO
     maven("https://maven.tterrag.com") // Registrate for EnderIO
+    maven("http://dogforce-games.com/maven") {
+        isAllowInsecureProtocol = true
+    } // GraphLib for EnderIO
     maven("https://maven.blamejared.com") // JEI
     mavenLocal()
 }
@@ -71,14 +71,17 @@ dependencies {
     // Forge
     forge("net.minecraftforge:forge:$minecraftVersion-$forgeVersion")
 
-    // Compile
+    // KubeJS
     modImplementation("dev.latvian.mods:kubejs-forge:$kjsVersion")
-    modImplementation("deps:EnderIO:$minecraftVersion-$eioVersion")
-    modCompileOnly("deps:EnderIO:$minecraftVersion-$eioVersion-sources")
-    modCompileOnly("mezz.jei:jei-$minecraftVersion-common-api:$jeiVersion") { isTransitive = false }
+    localRuntime("io.github.llamalad7:mixinextras-forge:0.2.0-rc.4")
 
-    // Runtime
+    // EnderIO
+    modImplementation("com.enderio:EnderIO:$minecraftVersion-$eioVersion")
     modLocalRuntime("com.tterrag.registrate:Registrate:MC1.20-1.3.11")
+    modLocalRuntime("dev.gigaherz.graph:GraphLib3:3.0.4")
+
+    // JEI
+    modCompileOnly("mezz.jei:jei-$minecraftVersion-common-api:$jeiVersion") { isTransitive = false }
     modLocalRuntime("mezz.jei:jei-$minecraftVersion-forge:$jeiVersion") { isTransitive = false }
 }
 

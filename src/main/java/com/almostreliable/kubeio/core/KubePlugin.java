@@ -47,7 +47,7 @@ public class KubePlugin extends KubeJSPlugin {
             MachineRecipes.ALLOY_SMELTING, AlloySmelterRecipeSchema.SCHEMA,
             MachineRecipes.ENCHANTING, EnchanterRecipeSchema.SCHEMA,
             MachineRecipes.PAINTING, PaintingRecipeSchema.SCHEMA,
-            MachineRecipes.SAGMILLING, SagMillRecipeSchema.SCHEMA,
+            MachineRecipes.SAG_MILLING, SagMillRecipeSchema.SCHEMA,
             MachineRecipes.SLICING, SlicerRecipeSchema.SCHEMA,
             MachineRecipes.SOUL_BINDING, SoulBinderRecipeSchema.SCHEMA,
             MachineRecipes.TANK, TankRecipeSchema.SCHEMA
