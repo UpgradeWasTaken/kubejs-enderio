@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog],
 and this project adheres to [Semantic Versioning].
 
+## [0.3.1] - 2023-09-22
+
+### Changed
+- changed minimum EnderIO version to 6.0.20-alpha
+
+### Fixed
+- fixed a crash caused by the alloy smelter mixin ([enderio#520], [#1], [#2])
+
+<!-- Links -->
+[enderio#520]: https://github.com/Team-EnderIO/EnderIO/issues/520
+[#1]: https://github.com/AlmostReliable/kubejs-enderio/issues/1
+[#2]: https://github.com/AlmostReliable/kubejs-enderio/pull/2
+
 ## [0.3.0] - 2023-09-20
 
 ### Added
@@ -35,6 +48,7 @@ Initial 1.20.1 release!
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
+[0.3.1]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.3.1-beta
 [0.3.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.3.0-beta
 [0.2.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-0.2.0-forge-beta
 [0.1.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-0.1.0-forge-beta
