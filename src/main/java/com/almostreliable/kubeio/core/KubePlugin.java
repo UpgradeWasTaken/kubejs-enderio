@@ -1,6 +1,7 @@
 package com.almostreliable.kubeio.core;
 
 import com.almostreliable.kubeio.recipe.*;
+import com.enderio.EnderIO;
 import com.enderio.base.common.init.EIORecipes;
 import com.enderio.core.common.recipes.CountedIngredient;
 import com.enderio.core.common.recipes.RecipeTypeSerializerPair;
@@ -53,7 +54,7 @@ public class KubePlugin extends KubeJSPlugin {
             MachineRecipes.TANK, TankRecipeSchema.SCHEMA
         );
 
-        RecipeNamespace namespace = event.namespace("enderio");
+        RecipeNamespace namespace = event.namespace(EnderIO.MODID);
 
         for (var schemaEntry : basicRecipeSchemas.entrySet()) {
             registerRecipeSchema(namespace, schemaEntry);
