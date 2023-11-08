@@ -1,5 +1,6 @@
 package com.almostreliable.kubeio.core;
 
+import com.almostreliable.kubeio.conduit.CustomConduitEntry;
 import com.almostreliable.kubeio.recipe.*;
 import com.enderio.EnderIO;
 import com.enderio.base.common.init.EIORecipes;
@@ -9,6 +10,10 @@ import com.enderio.machines.common.init.MachineRecipes;
 import com.enderio.machines.common.recipe.SagMillingRecipe;
 import com.google.gson.JsonObject;
 import dev.latvian.mods.kubejs.KubeJSPlugin;
+import dev.latvian.mods.kubejs.client.LangEventJS;
+import dev.latvian.mods.kubejs.event.EventGroup;
+import dev.latvian.mods.kubejs.event.EventHandler;
+import dev.latvian.mods.kubejs.generator.AssetJsonGenerator;
 import dev.latvian.mods.kubejs.item.InputItem;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeNamespace;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;
@@ -24,6 +29,11 @@ import java.util.Map;
 public class KubePlugin extends KubeJSPlugin {
 
     @Override
+    public void registerEvents() {
+        Events.GROUP.register();
+    }
+
+    @Override
     public void registerBindings(BindingsEvent event) {
         if (event.getType().isServer()) {
             event.add("MobCategory", MobCategory.class);
@@ -35,6 +45,23 @@ public class KubePlugin extends KubeJSPlugin {
     @Override
     public void registerTypeWrappers(ScriptType type, TypeWrappers typeWrappers) {
         typeWrappers.register(CountedIngredient.class, (cx, o) -> wrapCountedIngredient(o));
+    }
+
+    @Override
+    public void generateAssetJsons(AssetJsonGenerator generator) {
+        for (CustomConduitEntry conduit : ConduitRegistryEvent.CONDUITS) {
+            generator.itemModel(EnderIO.loc(conduit.id() + "_conduit"), modelGenerator -> {
+                modelGenerator.parent(EnderIO.loc("item/conduit").toString());
+                modelGenerator.texture("0", EnderIO.loc("block/conduit/" + conduit.id()).toString());
+            });
+        }
+    }
+
+    @Override
+    public void generateLang(LangEventJS event) {
+        for (CustomConduitEntry conduit : ConduitRegistryEvent.CONDUITS) {
+            event.add("item." + EnderIO.MODID + "." + conduit.id() + "_conduit", conduit.name());
+        }
     }
 
     @Override
@@ -90,5 +117,10 @@ public class KubePlugin extends KubeJSPlugin {
 
         InputItem inputItem = InputItem.of(o);
         return CountedIngredient.of(inputItem.count, inputItem.ingredient);
+    }
+
+    public interface Events {
+        EventGroup GROUP = EventGroup.of("EnderIOEvents");
+        EventHandler CONDUIT_REGISTRY = GROUP.startup("conduits", () -> ConduitRegistryEvent.class);
     }
 }

@@ -77,8 +77,8 @@ dependencies {
 
     // EnderIO
     modImplementation("com.enderio:EnderIO:$minecraftVersion-$eioVersion")
-    modLocalRuntime("com.tterrag.registrate:Registrate:MC1.20-1.3.11")
-    modLocalRuntime("dev.gigaherz.graph:GraphLib3:3.0.4")
+    modImplementation("dev.gigaherz.graph:GraphLib3:3.0.4")
+    modImplementation("com.tterrag.registrate:Registrate:MC1.20-1.3.11")
 
     // JEI
     modCompileOnly("mezz.jei:jei-$minecraftVersion-common-api:$jeiVersion") { isTransitive = false }
