@@ -1,4 +1,4 @@
-package com.almostreliable.kubeio.conduit;
+package com.almostreliable.kubeio.enderio.conduit;
 
 import com.enderio.api.conduit.IConduitMenuData;
 import com.enderio.api.conduit.IConduitType;

@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.mixin.filter;
 
-import com.almostreliable.kubeio.core.RecipesBinding;
+import com.almostreliable.kubeio.kube.recipe.RecipesBinding;
 import com.google.gson.JsonElement;
 import dev.latvian.mods.kubejs.recipe.RecipeJS;
 import dev.latvian.mods.kubejs.recipe.RecipesEventJS;

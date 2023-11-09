@@ -1,6 +1,6 @@
-package com.almostreliable.kubeio.recipe;
+package com.almostreliable.kubeio.kube.schema;
 
-import com.almostreliable.kubeio.util.CommonRecipeKeys;
+import com.almostreliable.kubeio.kube.recipe.CommonRecipeKeys;
 import com.enderio.machines.common.recipe.SlicingRecipe;
 import com.enderio.machines.data.recipes.SlicingRecipeProvider;
 import dev.latvian.mods.kubejs.recipe.RecipeExceptionJS;

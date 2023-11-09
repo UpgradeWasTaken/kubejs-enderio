@@ -1,6 +1,6 @@
-package com.almostreliable.kubeio.recipe;
+package com.almostreliable.kubeio.kube.schema;
 
-import com.almostreliable.kubeio.util.CommonRecipeKeys;
+import com.almostreliable.kubeio.kube.recipe.CommonRecipeKeys;
 import com.enderio.machines.common.recipe.PaintingRecipe;
 import com.enderio.machines.data.recipes.PaintingRecipeProvider;
 import dev.latvian.mods.kubejs.recipe.schema.RecipeSchema;

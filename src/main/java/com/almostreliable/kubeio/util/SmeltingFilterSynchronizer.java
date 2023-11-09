@@ -2,7 +2,7 @@ package com.almostreliable.kubeio.util;
 
 import com.almostreliable.kubeio.ModInitializer;
 import com.almostreliable.kubeio.compat.JeiAdapter;
-import com.almostreliable.kubeio.core.RecipesBinding;
+import com.almostreliable.kubeio.kube.recipe.RecipesBinding;
 import com.google.gson.JsonObject;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;

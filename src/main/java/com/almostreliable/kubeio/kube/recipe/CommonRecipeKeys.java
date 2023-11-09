@@ -1,4 +1,4 @@
-package com.almostreliable.kubeio.util;
+package com.almostreliable.kubeio.kube.recipe;
 
 import com.enderio.base.common.init.EIORecipes;
 import com.enderio.machines.common.init.MachineRecipes;

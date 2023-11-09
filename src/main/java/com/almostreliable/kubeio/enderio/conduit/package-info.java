@@ -1,5 +1,5 @@
 @ParametersAreNonnullByDefault @MethodsReturnNonnullByDefault
-package com.almostreliable.kubeio.conduit;
+package com.almostreliable.kubeio.enderio.conduit;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 

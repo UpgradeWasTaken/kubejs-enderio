@@ -1,7 +1,7 @@
-package com.almostreliable.kubeio.recipe;
+package com.almostreliable.kubeio.kube.schema;
 
-import com.almostreliable.kubeio.util.CommonRecipeKeys;
-import com.almostreliable.kubeio.util.RecipeComponents;
+import com.almostreliable.kubeio.kube.recipe.CommonRecipeKeys;
+import com.almostreliable.kubeio.kube.recipe.RecipeComponents;
 import com.enderio.core.common.recipes.CountedIngredient;
 import com.enderio.machines.common.recipe.AlloySmeltingRecipe;
 import com.enderio.machines.data.recipes.AlloyRecipeProvider;

@@ -1,5 +1,5 @@
 @ParametersAreNonnullByDefault @MethodsReturnNonnullByDefault
-package com.almostreliable.kubeio.core;
+package com.almostreliable.kubeio.kube.schema;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 

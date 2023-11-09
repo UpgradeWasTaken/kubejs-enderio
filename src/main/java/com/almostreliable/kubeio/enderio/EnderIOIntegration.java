@@ -1,9 +1,10 @@
-package com.almostreliable.kubeio.core;
+package com.almostreliable.kubeio.enderio;
 
+import com.almostreliable.kubeio.kube.recipe.RecipesBinding;
 import com.enderio.api.integration.Integration;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
 
-public class EIOIntegration implements Integration {
+public class EnderIOIntegration implements Integration {
 
     @Override
     public boolean acceptSmeltingRecipe(SmeltingRecipe recipe) {

@@ -1,6 +1,6 @@
 package com.almostreliable.kubeio.compat;
 
-import com.almostreliable.kubeio.core.RecipesBinding;
+import com.almostreliable.kubeio.kube.recipe.RecipesBinding;
 import com.enderio.machines.common.integrations.jei.category.AlloySmeltingCategory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fml.ModList;

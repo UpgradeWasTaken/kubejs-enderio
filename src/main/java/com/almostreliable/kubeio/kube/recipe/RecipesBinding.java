@@ -1,4 +1,4 @@
-package com.almostreliable.kubeio.core;
+package com.almostreliable.kubeio.kube.recipe;
 
 import dev.latvian.mods.kubejs.recipe.RecipeJS;
 import dev.latvian.mods.kubejs.recipe.filter.IDFilter;

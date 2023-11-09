@@ -1,9 +1,9 @@
 package com.almostreliable.kubeio;
 
-import com.almostreliable.kubeio.conduit.CustomConduitEntry;
-import com.almostreliable.kubeio.core.ConduitRegistryEvent;
-import com.almostreliable.kubeio.core.EIOIntegration;
-import com.almostreliable.kubeio.core.KubePlugin;
+import com.almostreliable.kubeio.enderio.EnderIOIntegration;
+import com.almostreliable.kubeio.enderio.conduit.CustomConduitEntry;
+import com.almostreliable.kubeio.kube.KubePlugin;
+import com.almostreliable.kubeio.kube.event.ConduitRegistryEvent;
 import com.almostreliable.kubeio.util.SmeltingFilterSynchronizer;
 import com.enderio.api.integration.IntegrationManager;
 import com.enderio.base.common.init.EIOCreativeTabs;
@@ -28,7 +28,7 @@ public final class ModInitializer {
         var modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(ModInitializer::onRegistration);
         modEventBus.addListener(ModInitializer::onTabContents);
-        IntegrationManager.addIntegration(new EIOIntegration());
+        IntegrationManager.addIntegration(new EnderIOIntegration());
     }
 
     public static ResourceLocation getRl(String path) {

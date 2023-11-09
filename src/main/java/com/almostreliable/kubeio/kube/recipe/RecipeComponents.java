@@ -1,6 +1,6 @@
-package com.almostreliable.kubeio.util;
+package com.almostreliable.kubeio.kube.recipe;
 
-import com.almostreliable.kubeio.core.KubePlugin;
+import com.almostreliable.kubeio.kube.KubePlugin;
 import com.almostreliable.kubeio.mixin.accessor.IngredientAccessor;
 import com.almostreliable.kubeio.mixin.accessor.TagValueAccessor;
 import com.enderio.core.common.recipes.CountedIngredient;

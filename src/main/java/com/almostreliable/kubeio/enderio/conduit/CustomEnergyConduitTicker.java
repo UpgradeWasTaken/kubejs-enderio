@@ -1,4 +1,4 @@
-package com.almostreliable.kubeio.conduit;
+package com.almostreliable.kubeio.enderio.conduit;
 
 import com.enderio.api.conduit.IConduitType;
 import com.enderio.api.misc.ColorControl;

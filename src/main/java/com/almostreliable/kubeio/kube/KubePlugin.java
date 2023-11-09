@@ -1,7 +1,9 @@
-package com.almostreliable.kubeio.core;
+package com.almostreliable.kubeio.kube;
 
-import com.almostreliable.kubeio.conduit.CustomConduitEntry;
-import com.almostreliable.kubeio.recipe.*;
+import com.almostreliable.kubeio.enderio.conduit.CustomConduitEntry;
+import com.almostreliable.kubeio.kube.event.ConduitRegistryEvent;
+import com.almostreliable.kubeio.kube.recipe.RecipesBinding;
+import com.almostreliable.kubeio.kube.schema.*;
 import com.enderio.EnderIO;
 import com.enderio.base.common.init.EIORecipes;
 import com.enderio.core.common.recipes.CountedIngredient;
@@ -50,7 +52,7 @@ public class KubePlugin extends KubeJSPlugin {
     @Override
     public void generateAssetJsons(AssetJsonGenerator generator) {
         for (CustomConduitEntry conduit : ConduitRegistryEvent.CONDUITS) {
-            generator.itemModel(EnderIO.loc(conduit.id() + "_conduit"), modelGenerator -> {
+            generator.itemModel(EnderIO.loc(conduit.id()), modelGenerator -> {
                 modelGenerator.parent(EnderIO.loc("item/conduit").toString());
                 modelGenerator.texture("0", EnderIO.loc("block/conduit/" + conduit.id()).toString());
             });
@@ -60,7 +62,7 @@ public class KubePlugin extends KubeJSPlugin {
     @Override
     public void generateLang(LangEventJS event) {
         for (CustomConduitEntry conduit : ConduitRegistryEvent.CONDUITS) {
-            event.add("item." + EnderIO.MODID + "." + conduit.id() + "_conduit", conduit.name());
+            event.add("item." + EnderIO.MODID + "." + conduit.id(), conduit.name());
         }
     }
 
