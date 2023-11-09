@@ -20,6 +20,7 @@ import net.minecraftforge.energy.IEnergyStorage;
 
 public class CustomEnergyConduitType extends TieredConduit<EnergyExtendedData> {
 
+    @SuppressWarnings("AssignmentToSuperclassField")
     public CustomEnergyConduitType(ResourceLocation texture, int transferRate) {
         super(
             texture,
@@ -28,6 +29,7 @@ public class CustomEnergyConduitType extends TieredConduit<EnergyExtendedData> {
             EnderConduitTypes.ICON_TEXTURE,
             new Vector2i(0, 24)
         );
+        this.clientConduitData = new CustomEnergyClientData(texture);
     }
 
     @Override
