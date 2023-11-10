@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog],
 and this project adheres to [Semantic Versioning].
 
+## [0.4.0] - 2023-11-10
+
+### Added
+- added `EnderIOEvents.conduits` event to allow adding custom energy conduits
+
 ## [0.3.1] - 2023-09-22
 
 ### Changed
