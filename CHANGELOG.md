@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning].
 
 ### Added
 - added `EnderIOEvents.conduits` event to allow adding custom energy conduits
+  - read more about it in the [wiki][energy-conduit]
+
+<!-- Links -->
+[energy-conduit]: https://github.com/AlmostReliable/kubejs-enderio/wiki/Events#registering-custom-energy-conduits
 
 ## [0.3.1] - 2023-09-22
 
@@ -53,6 +57,7 @@ Initial 1.20.1 release!
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
+[0.4.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.4.0-beta
 [0.3.1]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.3.1-beta
 [0.3.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.3.0-beta
 [0.2.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-0.2.0-forge-beta
