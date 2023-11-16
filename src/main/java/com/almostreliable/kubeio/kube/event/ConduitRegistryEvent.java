@@ -23,7 +23,7 @@ public class ConduitRegistryEvent extends EventJS {
         Preconditions.checkArgument(!id.contains(":"), "id must not contain a colon (:)");
         Preconditions.checkArgument(!id.contains(" "), "id must not contain a space");
         Preconditions.checkArgument(
-            CONDUITS.stream().anyMatch(conduit -> conduit.id().equals(id)),
+            CONDUITS.stream().noneMatch(conduit -> conduit.id().equals(id)),
             "id must be unique"
         );
 
