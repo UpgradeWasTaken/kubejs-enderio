@@ -11,6 +11,7 @@
 A [Minecraft] mod to add [KubeJS] integration to [EnderIO].
 
 [![Version][version_badge]][version_link]
+[![License][license_badge]][license]
 [![Wiki][wiki_badge]][wiki]
 
 </div>
@@ -26,10 +27,14 @@ For an in-depth explanation of the functionality and code examples, check out th
 2. Install Minecraft [Forge].
 3. Drop the **jar file** into your mods folder.
 
+## **🎓 License**
+This project is licensed under the [GNU Lesser General Public License v3.0][license].
+
 <!-- Badges -->
 [version_badge]: https://img.shields.io/github/v/release/UpgradeWasTaken/kubejs-enderio?include_prereleases&style=for-the-badge&label=Release&color=0078FF
 [version_link]: https://github.com/UpgradeWasTaken/kubejs-enderio/releases/latest
 [wiki_badge]: https://img.shields.io/badge/Read%20the-Wiki-ba00ff?style=for-the-badge
+[license_badge]: https://img.shields.io/github/license/AlmostReliable/kubejs-enderio?style=for-the-badge
 
 <!-- Links -->
 [minecraft]: https://www.minecraft.net/
