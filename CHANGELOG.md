@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog],
-and this project adheres to [Semantic Versioning].
+The format is based on [Keep a Changelog].
+
+## 0.5f - 2024-07-15
+* First Release of the fork!
+* Major Rewrite
+### Fixed
+* Conduit Events now work with EnderIO 1.20.1-6.1.6
+### Changed
+* Conduit Icon textures must be put in a folder called conduit_icon
 
 ## [0.4.1] - 2023-11-16
 
