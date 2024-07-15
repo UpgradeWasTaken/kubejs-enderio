@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog].
 
-## 0.5f - 2024-07-15
+## [0.5f] - 2024-07-15
 * First Release of the fork!
 * Major Rewrite
 ### Fixed
@@ -69,6 +69,7 @@ Initial 1.20.1 release!
 [semantic versioning]: https://semver.org/spec/v2.0.0.html
 
 <!-- Versions -->
+[0.5f]: https://github.com/UpgradeWasTaken/kubejs-enderio/releases/tag/v1.20.1-forge-0.5f-beta
 [0.4.1]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.4.1-beta
 [0.4.0]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.4.0-beta
 [0.3.1]: https://github.com/AlmostReliable/kubejs-enderio/releases/tag/v1.20.1-forge-0.3.1-beta

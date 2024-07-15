@@ -27,7 +27,7 @@ For an in-depth explanation of the functionality and code examples, check out th
 3. Drop the **jar file** into your mods folder.
 
 <!-- Badges -->
-[version_badge]: https://img.shields.io/badge/dynamic/json?color=0078FF&label=release&style=for-the-badge&query=name&url=https://api.razonyang.com/v1/github/tag/UpgradeWasTaken/kubejs-enderio%3Fprefix=v1.20.1-
+[version_badge]: https://img.shields.io/github/v/release/UpgradeWasTaken/kubejs-enderio?style=for-the-badge&label=Release&color=0078FF
 [version_link]: https://github.com/UpgradeWasTaken/kubejs-enderio/releases/latest
 [wiki_badge]: https://img.shields.io/badge/Read%20the-Wiki-ba00ff?style=for-the-badge
 
