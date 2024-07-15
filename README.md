@@ -1,5 +1,5 @@
 <h1 align="center">
-    <a style="color:red;font-size:18px" href="https://github.com/AlmostReliable/kubejs-enderio">This is a fork of AlmostReliable's plugin make to work with the newer versions of EnderIO. Click here to go to the original.</a>
+    <a style="color:red;font-size:18px" href="https://github.com/AlmostReliable/kubejs-enderio">This is a fork of AlmostReliable's plugin made to work with the newer versions of EnderIO. Click here to go to the original.</a>
 </h1>
 <h1 align="center">
     <a href="https://github.com/AlmostReliable/kubejs-enderio"><img src=https://i.imgur.com/b53y4YI.png" alt="Preview" width=200></a>
